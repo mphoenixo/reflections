@@ -1,0 +1,39 @@
+Reflect: Initializing a Repository
+What happens when you initialize a repository? Why do you need to do it?
+
+	- When you initialize a repository the .git folder gets created. The .git folder holds some metadata that allows identifying the changes between various versions.
+
+Reflect: Staging Area
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+	- The staging area contains files which are ready to be committed to the repository in one logical change. With the help of the intermediate staging area you can decide what changes from the working repository can be committed as one logical change.
+
+git diff -> diff between working directory and the staging area
+git diff --staged -> diff between staging area and the last commit
+git diff commit 1 commit 2 -> diff between last commit and the previous commit
+
+Reflect: Commit Size
+How can you use the staging area to make sure you have one commit per logical change?
+
+	- You can add to the staging area only the changes in the working area that represent a logical change.
+
+Reflect: When to Use Branches?
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	- When developing experimental features who might not make sense to stay on the master branch you can add a new branch and make the changes in there.
+
+Reflect: Visualizing with Diagrams
+How do the diagrams help you visualize the branch structure?
+
+	- With the help of a diagram you can see each commit's parent hence determining the starting point of each branch and the content of each branch (the commits of each branch).
+
+Reflect: Merging Two Branches
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+	- By merging two branches we apply all the commits from one branch in the other branch. Hence the resulting branch will have all the commits from both branches. The merge commit will have two parents: the head of both branches.
+
+Reflect: Automatic vs. Manual Merging
+What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
+	- Git cannot do automatic merging all the times effortlessly hence sometimes is easier to let the user manually edit the conflicts.
+
